@@ -17,10 +17,10 @@ public class Reduce {
     }
 
     public int getMaxValue() {
-        return arrayList.stream().mapToInt(Integer::valueOf).reduce(0,(max,a)->a>max?a:max);
+        return arrayList.stream().reduce(0,(max,a)->a>max?a:max);
     }
 
     public int getLastOdd() {
-        return arrayList.stream().mapToInt(Integer::valueOf).reduce(0,(lastOdd,a)->a%2==1?a:lastOdd);
+        return arrayList.stream().reduce(0,(lastOdd,a)->a%2==1?a:lastOdd);
     }
 }
