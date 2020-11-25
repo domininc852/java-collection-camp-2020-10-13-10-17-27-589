@@ -19,11 +19,11 @@ public class MyMap {
     }
 
     public List<Integer> getTriple() {
-        return array.stream().map(item->item*3).collect(Collectors.toList());
+        return array.stream().map(item -> item * 3).collect(Collectors.toList());
     }
 
     public List<String> mapLetter() {
-        return array.stream().map(item->letterList.get(item-1)).collect(Collectors.toList());
+        return array.stream().map(index -> letterList.get(index - 1)).collect(Collectors.toList());
     }
 
     public List<Integer> sortFromBig() {
